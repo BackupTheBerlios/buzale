@@ -1,0 +1,272 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title>BuZaLe</title>
+  </head>
+
+  <body background="bilder/hintergrund.jpg">
+    <h1>BuchstabenZahlenLernen (BuZaLe)</h1>
+    <table>
+      <tr>
+        <td>
+          <a href="#Einf&uuml;hrung">Einf&uuml;hrung</a>&nbsp;&nbsp;&nbsp;
+          <a href="#Spielaufbau">Spielaufbau</a>&nbsp;&nbsp;&nbsp;
+          <a href="#Installation">Installation</a>&nbsp;&nbsp;&nbsp;
+          <a href="#Konfiguration">Konfiguration </a>
+          <a name="Einf&uuml;hrung"> <h2>Einf&uuml;hrung</h2></a>
+          BuZaLe - der Titel ist gleich Programm.<br>
+          Dieses Spiel dient dazu Kindern, begleitend zur Schule, die Buchstaben 
+          und Zahlen n&auml;her zu bringen. <br>
+          Der Spielablauf ist hinsichtlich der gestellten Aufgaben frei konfigurierbar 
+          und kann dem aktuellen Wissensstand angepa&szlig;t werden.<br>
+          Die zu l&ouml;senden Aufgaben werden in Form von Bild.- und Sounddateien vorgegeben.
+          Dadurch ist es m&ouml;glich eigene Bilder zusammen mit dem Kind auszusuchen, mit
+          einer individuellen Sounddatei zu versehen und dann in das Spiel einzubinden.
+          <table>
+            <tr>
+              <th>Pers&ouml;nliches</th>
+              <td>
+                Das Spiel habe ich zusammen mit meiner Tochter (1. Schuljahr) entworfen.
+                Ziel war es das Interesse am Lernen auf spielerische weise zu f&ouml;rdern.
+                Die Bilder f&uuml;r die verschiedenen Aufgaben sowie die dazugeh&ouml;rige Sounddatei
+                wurden von ihr mit Begeisterung zusammengestellt. Das Erlernen von W&ouml;rtern
+                und L&ouml;sen von keinen Rechenaufgaben geschah dadurch weniger durch das
+                eigentliche Spielen, als durch das kreative Erstellen der Spielaufgaben.
+              </td>
+            </tr>
+          </table>
+          W&auml;hrend des Spiels k&ouml;nnen die Eingaben sowohl &uuml;ber die Maus (klick auf die
+          entsprechenden Buchstaben oder auf die entsprechenden Zahlen) als auch &uuml;ber 
+          die Tastatur erfolgen.<br>
+          Die Farbe und Gr&ouml;&szlig;e der Zeichen auf dem Bildschirm k&ouml;nnen individuell angepa&szlig;t
+          werden.
+    
+          <a name="Spielaufbau"> <h2>Spielaufbau</h2></a>
+          Der Spielaufblauf besteht aus folgenden Spielstufen:<br>
+          <table>
+            <tr>
+              <td><img src="bilder/Spielaufbau.gif" name="Spielaufbau"></td>
+              <td>
+                <ul>
+                  <li>
+                    Nach dem Progammstart befindet man sich im Level 'START'<br>
+                    Hier werden zyklisch alle f&uuml;r diese Spielstufe definierten Bilder angezeigt
+                    und die dazugeh&ouml;rende Sounddatei abgespielt.<br>
+                    Durch Anwahl der Taste <b>Deutsch/Mathe</b> verzweigt man in die entsprechende
+                    Spielstufe DA bzw. MA.
+                  </li>
+                  <li>
+                    In den Spielstufen DA..DE bzw. MA..ME werden die Bilder mit den gestellten Aufgaben
+                    in zuf&auml;lliger Reihenfolge angezeigt. Durch die Eingabe der richtigen Antwort, wird die n&auml;chste
+                    Aufgabe ausgew&auml;hlt. Der Name der dargestellten Bilddatei ist gleichzeitig die richtige
+                    Antwort. So k&ouml;nnen im Prinzip x-beliebige Aufgaben als Bilddatei erzeugt und mit dem
+                    L&ouml;sungstext als Filename in das Spiel eingebunden werden.
+                    Eine normale Spielstufe ist beendet wenn 20 Aufgaben richtig gel&ouml;st wurden.<br>
+                    Die Anzahl der Stufen bis zum Level 'ENDE' kann parametriert werden.<br>
+                    Das letzte Level (DE bzw. ME) kann als sogenanntes Bonus-Level gekennzeichnet werden.
+                    Dort m&uuml;ssen dann m&ouml;glichst viele Aufgaben in einem bestimmten Zeitraum gel&ouml;st werden.
+                    Diese Zeitspanne ist ebenfalls einstellbar.<br>
+                    Jede richtige Antwort erh&ouml;ht die Punktzahl, jede Falsche erniedrigt diese.<br>
+                    Nach Beenden der Stufe DE/ME gelangt man zum 'ENDE' Level.
+                  </li>
+                  <li>
+                    In der Spielstufe 'ENDE' kann man die erreichte Punktzahl in einer Highscore-Liste zusammen
+                    mit einem Namen eintragen. Vorausgesetzt die erreichten Punkte sind hoch genug um einen
+                    Platz in dieser Bestenliste belegen zu k&ouml;nnen. Die Listen werden getrennt
+                    f&uuml;r die Stufen Mathe und Deutsch gef&uuml;hrt.<br>
+                    Durch Anwahl der Zielflagge (rechte Obere Ecke in der Menuleiste) kann man jederzeit 
+                    aus einem Spiel-Level in dieses ENDE-Level gelangen.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+          
+        </td>
+        <td>
+        <img src="bilder/start.jpg" name="Startfenster">  
+        <img src="bilder/DA.jpg" name="Startfenster">  
+        <img src="bilder/ENDE.jpg" name="Startfenster">  
+        </td>
+      </tr>
+    </table>
+    <a name="Installation"> <h2>Installation</h2></a>
+    Das Spiel wurde mit der 
+    <a href="http://gtkmm.sourceforge.net"> GTK-- Library </a>
+    erstellt. Deshalb sollte vor der Installation sichergestellt werden, 
+    ob diese vorhanden ist.<br>
+    Das Installations-Skript sowie die Makefiles wurden mit den Tools <b>autoconf</b> und <b>automake</b> erzeugt.<br>
+    Deshalb gliedert sich eine Installation in folgende Schritte:<br>
+    <ol>
+      <li>tar-File mit tar xvzf buzale.tgz auspacken</li>
+      <li>cd buzale0.x</li>
+      <li>./configure</li>
+      <li>make</li>
+      <li>make install (als super-user)</li>
+    </ol>
+    Das Programm kann dann mit <b>&lt;Installationspfad&gt;/buzale</b> gestartet werden.<br>
+    Vorher sollte man aber das Konfigurationsfile 
+    <a href="#Konfiguration">&lt;Installationspfad&gt;buzale_conf</a> anpassen.<br>
+    Dieses File wird, falls im HOME-Verzeichnis kein File mit dem Namen <b>.buzale</b> existiert, als Vorlage
+    dorthin kopiert. Somit ist jede Spielkonfiguration User-Abh&auml;ngig. Ist dies nicht gew&uuml;nscht, kann man einfach
+    einen Link auf ein zentrales File anlegen.<br>
+    Zum Beispiel: <b>ln -s &lt;Installationspfad&gt;buzale_conf ~/.buzale</b><br>
+    Vor dem eigentlichen Spiel, gilt es jetzt aber kreativ zu sein und sich entsprechende Aufgaben in Form
+    von Bilddateien (.xpm) und evtl. Sounddateien (.wav) zu erstellen.<br>
+    Ein paar Beispiele liegen dem Paket schon bei. Die erstellten Sound.- und Bilddateien werden dann in das
+    Konfigurationsfile eingetragen.
+    <a name="Konfiguration"> <h2>Konfiguration</h2></a>
+    Das File <b>~/.buzale</b> wird bei jedem Zugriff ge&ouml;ffnet und nach dem Lesen gleich wieder geschlossen. 
+    So ist es m&ouml;glich in der Datei, w&auml;hrend das Spiel l&auml;uft, &Auml;nderungen vornehmen zu k&ouml;nnen. (ES LEBE DER PLATTEN-CASH)<br>
+    Ein Eintrag hat immer folgenden Syntax:  <b>Schl&uuml;sselwort = Parameter</b><br>
+    Parameter, die aus mehreren W&ouml;rtern bestehen, k&ouml;nnen auch &uuml;ber mehrere Zeilen verteilt stehen. Das Ende der Zeile mu&szlig;
+    dann aber mit einem <b>'\'</b> abgeschlossen sein.<br>
+    Jeder Eintrag liegt unter einer [Section].<br>
+    <pre>
+[section1]
+Schl&uuml;sselwort1 = Parameter
+Schl&uuml;sselwort2 = Parameter
+[section2]
+Schl&uuml;sselwort1 = Parameter
+Schl&uuml;sselwort2 = Parameter
+    </pre>
+    Es sind folgende Sections vorgesehen:<br>
+    <table border=1>
+      <tr>
+        <td>[Allgemein]</td><td>Allgemeine Einstellungen, die für das ganze Spiel gelten.
+                                Zum Beispiel: Farben, Schriftarten, Suchpfade</td>
+      </tr>
+      <tr>
+        <td>[START]    </td><td>Bilder und Sounddateien, die beim Spielstart (Intro) 
+                                angezeigt werden sollen.</td>
+      </tr>
+      <tr>
+        <td>[DA]<br>
+            ..  <br>
+            [DE]       </td><td>Bilder und Sounddateien, die in den einzelnen Spielstufen im 
+                                Zweig 'Deutsch' angezeigt werden sollen.</td>
+      </tr>
+      <tr>
+        <td>[MA]<br>
+            ..  <br>
+            [ME]       </td><td>Bilder und Sounddateien, für die Mathe-Aufgaben</td>
+      </tr>
+      <tr>
+        <td>[ENDE]     </td><td>Files in der der aktuelle Punktestand abgespeichert werden kann<br>
+                                (Highscore-Liste)</td>
+      </tr>
+    </table>
+    Wird unter einer Section ein erforderlicher Eintrag nicht gemacht,so sucht das Prgramm bis an
+    das Dateiende nach einem passenden Eintrag. Damit ist es möglich Einträge die für mehrere Sections
+    gleich sein sollen, nur in der letzten Section zu definieren.
+    Zum Beispiel:<br>
+    <pre>
+[DA]
+[D1]
+[DE]
+name = Vogel Ofen
+    </pre>
+    Die Bild.- und Sounddateien 'Vogel' und 'Ofen' sind für die Sections [DA], [D1], [DE] definiert.
+
+    <h3>Auflistung aller Sections und deren mögliche Einträge</h3>
+    <table border=0 bgcolor=#CCFFFF>
+      <tr valign=top bgcolor=#CCFFCC><td><b>[Allegmein]</b></td>                                                         </tr>
+      <tr valign=top><td>Font1            </td><td>=</td><td>Name des Default-Zeichensatzes        </td></tr>
+      <tr valign=top><td>Font2            </td><td>=</td><td>Zeichensatz des Eingabefeldes und   
+                                                             des Leveltextes                       </td></tr>
+      <tr valign=top><td>Color1           </td><td>=</td><td>Farbe 1 für Tastenbeschriftung        </td></tr>
+      <tr valign=top><td>Color2           </td><td>=</td><td>Farbe 2 für Tastenbeschriftung        </td></tr>
+      <tr valign=top><td>Color3           </td><td>=</td><td>Farbe 3 für Tastenbeschriftung      
+                                                             und Farbe des Leveltextes             </td></tr>
+      <tr valign=top><td>Color4           </td><td>=</td><td>Farbe des Lösungstextes               </td></tr>
+      <tr valign=top><td>Color5           </td><td>=</td><td>Default-Hintergrundfarbe der Tasten   </td></tr>
+      <tr valign=top><td>Color6           </td><td>=</td><td>Markierungsfarbe der Tasten (Hilfe)    </td></tr>
+      <tr valign=top><td>BildPfad         </td><td>=</td><td>Verzeichnis in dem die Bilder
+                                                             (xxx.xpm) abgelegt sind.              </td></tr>
+      <tr valign=top><td>SoundPfad        </td><td>=</td><td>Verzeichnis in dem die Sounddateien
+                                                             (xxx.wav) abgelegt sind.              </td></tr>
+      <tr valign=top><td>SoundPrg         </td><td>=</td><td>Programm, daß zur Soundausgabe
+                                                             aufgerufen werden soll, z.B. 'play'   </td></tr>
+      <tr valign=top><td>OK               </td><td>=</td><td>Sounddateien, die bei einer richtigen
+                                                             Antwort abgespielt werden sollen.<br>
+                                                             (Filename ohne Endung .wav)           </td></tr>
+      <tr valign=top><td>NOK              </td><td>=</td><td>Sounddateien, die bei einer falschen
+                                                             Antwort abgespielt werden sollen.<br>
+                                                  (           Filename ohne Endung .wav)           </td></tr>
+      <tr valign=top bgcolor=#CCFFCC><td><b>[START]</b>   </td>                                                         </tr>
+      <tr valign=top><td>Sound            </td><td>=</td><td>Sounddatei, die beim Starten des Levels
+                                                             abgespielt werden soll<br>
+                                                             (Filename ohne Endung .wav)           </td></tr>
+      <tr valign=top><td>Namen            </td><td>=</td><td>Dateien, die im Intro in zufälliger
+                                                             Reihenfolge abgespielt bzw. angezeigt
+                                                             werden sollen<br>
+                                                             (Filenamen ohne Endung .wav und .xpm) </td></tr>
+      
+      <tr valign=top bgcolor=#CCFFCC><td><b>[DA]</b><br>
+                                         <b>[D1]</b> D1..D3 müssen<br>
+                                         <b>[D2]</b> nicht zwingend<br>
+                                         <b>[D3]</b> vorhanden sein.<br>
+                                         <b>[DE]</b>      </td>                                                         </tr>
+      <tr valign=top><td>Titel            </td><td>=</td><td>Name der Spielstufe (wird beim Wechsel
+                                                             in das entsprechende Level angezeigt)  </td></tr>
+      <tr valign=top><td>Sound            </td><td>=</td><td>Sounddatei, die beim Starten des Levels
+                                                             abgespielt werden soll<br>
+                                                             (Filename ohne Endung .wav)           </td></tr>
+      <tr valign=top><td>AnzZeichen       </td><td>=</td><td>Anzahl der Zeichen, die eingegeben   
+                                                             werden müssen z:B.:<br>
+                                                             1 = erster Buchstabe<br>
+                                                             2 = die ersten beiden Buchstaben <br>
+                                                             -1 = ganzes Lösungswort                </td></tr>
+      <tr valign=top><td>Bonus            </td><td>=</td><td>Kennung für Bonuslevel<br>
+                                                             0 = normales Level; es müssen 20
+                                                             Aufgaben gelöst werden.<br>
+                                                             1 = Bonus Level; möglichst viele
+                                                             Aufgaben in einer bestimmten Zeit
+                                                             lösen                                 </td></tr>
+      <tr valign=top><td>Zeit             </td><td>=</td><td>Zeit in Sekunden in der die Aufgaben
+                                                             im Bonus-Level gelöst werden können   </td></tr>
+      <tr valign=top><td>Namen            </td><td>=</td><td>Liste mit Bild.- bzw. Sounddateien<br>
+                                                             (Filenamen ohne Endung .wav und .xpm) </td></tr>
+       
+
+      <tr valign=top bgcolor=#CCFFCC><td><b>[MA]</b><br>
+                                         <b>[M1]</b> D1..D3 müssen<br>
+                                         <b>[M2]</b> nicht zwingend<br>
+                                         <b>[M3]</b> vorhanden sein.<br>
+                                         <b>[ME]</b>      </td>                                         </tr>
+      <tr valign=top><td>Titel            </td><td>=</td><td>Name der Spielstufe (wird beim Wechsel
+                                                             in das entsprechende Level angezeigt)  </td></tr>
+      <tr valign=top><td>Sound            </td><td>=</td><td>Sounddatei, die beim Starten des Levels
+                                                             abgespielt werden soll<br>
+                                                             (Filename ohne Endung .wav)           </td></tr>
+      <tr valign=top><td>AnzZeichen       </td><td>=</td><td>immer -1                              </td></tr>
+      <tr valign=top><td>Bonus            </td><td>=</td><td>Kennung für Bonuslevel<br>
+                                                             0 = normales Level; es müssen 20
+                                                             Aufgaben gelöst werden.<br>
+                                                             1 = Bonus Level; möglichst viele
+                                                             Aufgaben in einer bestimmten Zeit
+                                                             lösen                                 </td></tr>
+      <tr valign=top><td>Zeit             </td><td>=</td><td>Zeit in Sekunden in der die Aufgaben
+                                                             im Bonus-Level gelöst werden können   </td></tr>
+      <tr valign=top><td>Namen            </td><td>=</td><td>Liste mit Bild.- bzw. Sounddateien<br>
+                                                             (Filenamen ohne Endung .wav und .xpm) </td></tr>
+       
+
+      <tr valign=top bgcolor=#CCFFCC><td><b>[ENDE]</b>    </td>                                         </tr>
+      <tr valign=top><td>Mathe            </td><td>=</td><td>Datei für Highscore-Liste (Mathe)<br>
+                                                             z.B. /var/BuZaLe_Mathe                </td></tr>
+      <tr valign=top><td>Deutsch          </td><td>=</td><td>Datei für Highscore-Liste (Deutsch)<br>
+                                                             z.B. /var/BuZaLe_Deutsch              </td></tr>
+    </table>
+    Die parallel zur Bilddatei existierende Sounddatei ist nicht zwingend erforderlich. Sie wird in den
+    einzelnen Spielstufen DA-DE, MA-ME nur bei betätigen der Hilfe-Taste ausgegeben<br>
+    Um mehrere Aufgaben für eine Lösung vorgeben zu können, kann der Lösungsname durch ein .xx erweitert werden.<br>
+    z.B. zwei Bilder mit dem Namen 'Maus.xpm'  ->  Maus.1.xpm Maus.2.xpm
+    <hr>
+    <address><a href="mailto:mboller@surfeu.de">Markus Boller</a></address>
+<!-- Created: Sat Feb 17 13:52:31 CET 2001 -->
+<!-- hhmts start -->
+Last modified: Sat Feb 24 09:24:49 CET 2001
+<!-- hhmts end -->
+  </body>
+</html>
