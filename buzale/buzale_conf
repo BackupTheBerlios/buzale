@@ -1,8 +1,32 @@
 Dies ist das Konfigurations-File des Programms 'BuZaLe'
 
 [Allgemein]
+            Default-Zeichensatz 
+Font1     = -urw-gothic l-demi bold-r-normal--50-481-75-75-p-283-iso8859-1
+
+            Zeichensatz des Eingabefelds und des Leveltextes
+Font2     = -adobe-courier-bold-r-normal--42-401-75-75-m-250-iso8859-1
+
+            Farbe für Tasten
+Color1    = medium sea green
+Color2    = LightGoldenrod1
+
+            Farbe für Tasten und Leveltext
+Color3    = indian red
+
+            Farbe für Lösungstext
+Color4    = RoyalBlue4
+
+            Farbe für Tasten (Default): 
+Color5    = burlywood2
+
+            Farbe für Tasten (Hilfe)  : 
+Color6    = turquoise1
+
 BildPfad  = ${prefix}/share/buzale/bilder
 SoundPfad = ${prefix}/share/buzale/sounds
+SoundPrg  = play
+
 OK        = SuperSuperrichtig
 NOK       = Schade
 
@@ -55,7 +79,8 @@ Sound      =
 AnzZeichen = -1
 Bonus      = 0
 Zeit       = 0
-Namen      = 2.1 
+Namen      = 2.1
+
 [M1]
 Titel      = Rechnen 2
 Sound      = 
@@ -63,6 +88,7 @@ Bonus      = 0
 Zeit       = 0
 AnzZeichen = -1
 Namen      = 5.10
+
 [ME]
 Titel      = Bonus!!!
 Sound      = 
