@@ -1,0 +1,2 @@
+setenv CVS_RSH ssh
+setenv CVSROOT mboller@cvs.berlios.de:/cvsroot/buzale
