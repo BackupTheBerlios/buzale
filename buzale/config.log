@@ -1,0 +1,23 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:568: checking for a BSD compatible install
+configure:621: checking whether build environment is sane
+configure:678: checking whether make sets ${MAKE}
+configure:724: checking for working aclocal
+configure:737: checking for working autoconf
+configure:750: checking for working automake
+configure:763: checking for working autoheader
+configure:776: checking for working makeinfo
+configure:793: checking whether to enable maintainer-specific portions of Makefiles
+configure:821: checking for c++
+configure:853: checking whether the C++ compiler (c++  ) works
+configure:869: c++ -o conftest    conftest.C  1>&5
+configure:895: checking whether the C++ compiler (c++  ) is a cross-compiler
+configure:900: checking whether we are using GNU C++
+configure:928: checking whether c++ accepts -g
+configure:970: checking for gtkmm-config
+configure:1004: checking Ist GTK-- installiert ?
+configure:1052: checking for gtkmm-config
+configure:1088: checking for GTK-- - version >= 1.2.2
+configure:1202: c++ -o conftest -g -O2 -I/usr/local/lib/gtkmm/include -I/usr/local/include -I/usr/lib/glib/include -I/usr/X11R6/include -I/usr/local/lib/sigc++/include   conftest.C  -rdynamic -L/usr/local/lib -L/usr/lib -L/usr/X11R6/lib -lgtkmm -lgdkmm -lgtk -lgdk -lgmodule -lglib -ldl -lXi -lXext -lX11 -lm -lsigc -lpthread 1>&5

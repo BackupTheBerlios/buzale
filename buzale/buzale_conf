@@ -1,0 +1,76 @@
+Dies ist das Konfigurations-File des Programms 'BuZaLe'
+
+[Allgemein]
+BildPfad  = ${prefix}/share/buzale/bilder
+SoundPfad = ${prefix}/share/buzale/sounds
+OK        = SuperSuperrichtig
+NOK       = Schade
+
+[START]
+Titel      = Intro
+Sound      =
+AnzZeichen = 0
+Namen      = Apfel Ball \
+             2.1 5.10
+[DA]
+Titel      = Level 1
+Sound      = Level1
+AnzZeichen = 1
+Bonus      = 0
+Zeit       = 0
+
+[D1]
+Titel      = Level 2
+Sound      = 
+AnzZeichen = 2
+Bonus      = 0
+Zeit       = 0
+
+[D2]
+Titel      = Level 3
+Sound      = 
+AnzZeichen = 3
+Bonus      = 0
+Zeit       = 0
+
+[D3]
+Titel      = Level 4
+Sound      = 
+AnzZeichen = -1
+Bonus      = 0
+Zeit       = 0
+
+[DE]
+Titel      = Bonus!!!
+Sound      = 
+AnzZeichen = -1
+Bonus      = 1
+Zeit       = 60
+
+Namen      = Apfel Ball 
+
+[MA]
+Titel      = Rechnen 1
+Sound      = 
+AnzZeichen = -1
+Bonus      = 0
+Zeit       = 0
+Namen      = 2.1 
+[M1]
+Titel      = Rechnen 2
+Sound      = 
+Bonus      = 0
+Zeit       = 0
+AnzZeichen = -1
+Namen      = 5.10
+[ME]
+Titel      = Bonus!!!
+Sound      = 
+Bonus      = 1
+Zeit       = 20
+AnzZeichen = -1
+Namen      = 5.10
+
+[ENDE]
+Mathe   = /var/buzale/BuZaLe_Mathe
+Deutsch = /var/buzale/BuZaLe_Deutsch

@@ -1,0 +1,42 @@
+AC_INIT(src/main.cc)
+
+AM_INIT_AUTOMAKE(BuZaLe, 0.9)
+AM_CONFIG_HEADER(config.h)
+AM_MAINTAINER_MODE
+
+dnl prueft, ob C++ funktioniert
+AC_PROG_CXX
+AC_LANG_CPLUSPLUS
+
+dnl prueft, ob gtkmm installiert ist
+AC_PATH_PROG(GTKMM_CONFIG, gtkmm-config, no)
+AC_MSG_CHECKING(Ist GTK-- installiert ?)
+if test "$GTKMM_CONFIG" = "no" ; then
+   AC_MSG_RESULT([no])
+   AC_MSG_ERROR([GTK-- ist nicht installiert])
+ fi 
+AC_MSG_RESULT([yes])
+
+dnl prueft, ob die Version von GTK-- min. 1.2.
+AM_PATH_GTKMM(1.2.2,,exit)
+
+dnl Variablen fuer Makefile bestimmen 
+GTK_CFLAGS=`gtkmm-config --cflags`
+GTK_LIBS=`gtkmm-config --libs`
+BUZALEDATA=${datadir}/buzale
+
+dnl Variable in config.h eintragen
+dnl AC_DEFINE_UNQUOTED(BUZALEDATA, ${BUZALEDATA})
+
+dnl Variablen in Unterverzeichnisse vererben
+AC_SUBST(GTK_CFLAGS)
+AC_SUBST(GTK_LIBS)
+AC_SUBST(BUZALEDATA)
+
+dnl Makefiles aus Makefile.in erzeugen
+AC_OUTPUT([
+Makefile
+buzale_conf
+src/Makefile
+bilder/Makefile
+])
